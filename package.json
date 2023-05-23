@@ -1,0 +1,27 @@
+{
+  "name": "uhi_backend",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Backend for UHI based web application",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hitenvats16/UHI_Backend.git"
+  },
+  "author": "Hiten",
+  "license": "MIT",
+  "private": false,
+  "bugs": {
+    "url": "https://github.com/hitenvats16/UHI_Backend/issues"
+  },
+  "homepage": "https://github.com/hitenvats16/UHI_Backend#readme",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "mongoose": "^7.2.0"
+  }
+}
