@@ -47,3 +47,9 @@ export async function findUserById(id){
   const user = await UserModel.findById(id)
   return user
 }
+
+export async function decrementBedCount(id){
+  const hospital = await UserModel.findById(id)
+  hospital.number_of_beds -= 1;
+  await hospital.save()
+}

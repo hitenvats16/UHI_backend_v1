@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import { findUserById, listHospitals } from "../database/controllers/user.js";
+import { decrementBedCount, findUserById, listHospitals } from "../database/controllers/user.js";
 import { calcDistance } from "../utils/hospital.js";
 
 const hospitalRouter = Router();
@@ -23,5 +23,13 @@ hospitalRouter.get("/search", async (req, res) => {
     error: null,
   });
 });
+
+hospitalRouter.post('/update-beds',async (req,res)=>{
+  const id = req.query['token']
+  await decrementBedCount(id)
+  return res.json({
+    message: 'complete'
+  })
+})
 
 export default hospitalRouter;
